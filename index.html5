@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wounded Military Heroes Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Heebo:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+:root {
+  --navy: #101D35; --navy-deep: #0A1424; --navy-darker: #050B18; --military-blue: #172B4D;
+  --gold: #B89550; --gold-bright: #D4AF37; --gold-champagne: #E4CD91; --gold-pale: #F7E7B4; --gold-deep: #8B6F2C;
+  --gold-gradient: linear-gradient(135deg, #F7E7B4 0%, #D4AF37 50%, #B89550 100%);
+  --ivory: #F8F6F0; --white: #FFFFFF; --silver: #B8BCC4; --green: #507B60; --green-light: #6B9B7E; --grey: #858B96; --grey-light: #E0E3E8; --red: #B22234;
+  --shadow-soft: 0 4px 24px rgba(0,0,0,0.08); --shadow-medium: 0 8px 32px rgba(0,0,0,0.12); --shadow-dark: 0 16px 48px rgba(0,0,0,0.4); --shadow-gold: 0 8px 32px rgba(184,149,80,0.25);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:'Inter',sans-serif; background:var(--navy); color:#2c2c2c; line-height:1.6; overflow-x:hidden; min-height:100vh; }
+
+/* Flag Background */
+.flag-bg { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-2; opacity:0.22; pointer-events:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" preserveAspectRatio="xMidYMid slice"><rect width="1235" height="650" fill="%23fff"/><g fill="%23b22234"><rect width="1235" height="50" y="0"/><rect width="1235" height="50" y="100"/><rect width="1235" height="50" y="200"/><rect width="1235" height="50" y="300"/><rect width="1235" height="50" y="400"/><rect width="1235" height="50" y="500"/><rect width="1235" height="50" y="600"/></g><rect width="494" height="350" fill="%233c3b6e"/><g fill="%23fff"><circle cx="30" cy="30" r="12"/><circle cx="90" cy="30" r="12"/><circle cx="150" cy="30" r="12"/><circle cx="210" cy="30" r="12"/><circle cx="270" cy="30" r="12"/><circle cx="330" cy="30" r="12"/><circle cx="390" cy="30" r="12"/><circle cx="450" cy="30" r="12"/><circle cx="60" cy="60" r="12"/><circle cx="120" cy="60" r="12"/><circle cx="180" cy="60" r="12"/><circle cx="240" cy="60" r="12"/><circle cx="300" cy="60" r="12"/><circle cx="360" cy="60" r="12"/><circle cx="420" cy="60" r="12"/><circle cx="30" cy="90" r="12"/><circle cx="90" cy="90" r="12"/><circle cx="150" cy="90" r="12"/><circle cx="210" cy="90" r="12"/><circle cx="270" cy="90" r="12"/><circle cx="330" cy="90" r="12"/><circle cx="390" cy="90" r="12"/><circle cx="450" cy="90" r="12"/><circle cx="60" cy="120" r="12"/><circle cx="120" cy="120" r="12"/><circle cx="180" cy="120" r="12"/><circle cx="240" cy="120" r="12"/><circle cx="300" cy="120" r="12"/><circle cx="360" cy="120" r="12"/><circle cx="420" cy="120" r="12"/><circle cx="30" cy="150" r="12"/><circle cx="90" cy="150" r="12"/><circle cx="150" cy="150" r="12"/><circle cx="210" cy="150" r="12"/><circle cx="270" cy="150" r="12"/><circle cx="330" cy="150" r="12"/><circle cx="390" cy="150" r="12"/><circle cx="450" cy="150" r="12"/><circle cx="60" cy="180" r="12"/><circle cx="120" cy="180" r="12"/><circle cx="180" cy="180" r="12"/><circle cx="240" cy="180" r="12"/><circle cx="300" cy="180" r="12"/><circle cx="360" cy="180" r="12"/><circle cx="420" cy="180" r="12"/><circle cx="30" cy="210" r="12"/><circle cx="90" cy="210" r="12"/><circle cx="150" cy="210" r="12"/><circle cx="210" cy="210" r="12"/><circle cx="270" cy="210" r="12"/><circle cx="330" cy="210" r="12"/><circle cx="390" cy="210" r="12"/><circle cx="450" cy="210" r="12"/><circle cx="60" cy="240" r="12"/><circle cx="120" cy="240" r="12"/><circle cx="180" cy="240" r="12"/><circle cx="240" cy="240" r="12"/><circle cx="300" cy="240" r="12"/><circle cx="360" cy="240" r="12"/><circle cx="420" cy="240" r="12"/><circle cx="30" cy="270" r="12"/><circle cx="90" cy="270" r="12"/><circle cx="150" cy="270" r="12"/><circle cx="210" cy="270" r="12"/><circle cx="270" cy="270" r="12"/><circle cx="330" cy="270" r="12"/><circle cx="390" cy="270" r="12"/><circle cx="450" cy="270" r="12"/><circle cx="60" cy="300" r="12"/><circle cx="120" cy="300" r="12"/><circle cx="180" cy="300" r="12"/><circle cx="240" cy="300" r="12"/><circle cx="300" cy="300" r="12"/><circle cx="360" cy="300" r="12"/><circle cx="420" cy="300" r="12"/><circle cx="30" cy="330" r="12"/><circle cx="90" cy="330" r="12"/><circle cx="150" cy="330" r="12"/><circle cx="210" cy="330" r="12"/><circle cx="270" cy="330" r="12"/><circle cx="330" cy="330" r="12"/><circle cx="390" cy="330" r="12"/><circle cx="450" cy="330" r="12"/></g></svg>'); background-size:cover; background-position:center; background-repeat:no-repeat; }
+.flag-overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-1; pointer-events:none; background:linear-gradient(135deg, rgba(255,255,255,0.65), rgba(248,246,240,0.75)); }
+
+/* RTL Support */
+body.rtl { font-family:'Heebo',sans-serif; }
+body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5, body.rtl .btn, body.rtl .nav-link, body.rtl .eyebrow, body.rtl .brand-text { font-family:'Heebo',sans-serif !important; letter-spacing:0 !important; text-transform:none !important; }
+body.rtl .italic-serif { font-family:'Heebo',sans-serif !important; font-style:normal !important; }
+body.rtl .timeline::before { inset-inline-start:0; }
+body.rtl .timeline-item { padding-inline-start:40px; padding-inline-end:0; }
+body.rtl .timeline-dot { inset-inline-start:-49px; }
+body.rtl .timeline-card { border-inline-start:3px solid var(--gold); border-inline-end:none; }
+body.rtl .form-grid-2 { direction:rtl; }
+
+/* Header */
+header { position:fixed; top:0; left:0; width:100%; z-index:1000; background:rgba(248,246,240,0.96); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:2px solid var(--gold); box-shadow:var(--shadow-soft); }
+.nav-container { max-width:1440px; margin:0 auto; padding:12px 24px; }
+.nav-top { display:flex; justify-content:space-between; align-items:center; }
+.brand { display:flex; align-items:center; gap:12px; cursor:pointer; }
+.medal-emblem { width:44px; height:44px; flex-shrink:0; }
+.medal-emblem svg { width:100%; height:100%; }
+.brand-text { font-family:'Cinzel',serif; font-weight:700; font-size:1.1rem; color:var(--navy); letter-spacing:1.5px; white-space:nowrap; }
+.nav-right { display:flex; gap:16px; align-items:center; }
+.lang-selector { display:flex; border:1.5px solid var(--gold); border-radius:8px; overflow:hidden; }
+.lang-btn { padding:8px 14px; border:none; background:transparent; cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--navy); transition:all 0.3s; }
+.lang-btn.active { background:var(--navy); color:var(--gold-bright); }
+.mobile-toggle { display:none; font-size:1.4rem; cursor:pointer; color:var(--navy); background:none; border:none; padding:8px; }
+.nav-links { display:flex; gap:0; margin-top:10px; flex-wrap:wrap; border-top:1px solid rgba(184,149,80,0.3); padding-top:10px; }
+.nav-link { font-family:'Cinzel',serif; font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:1.2px; color:var(--navy); cursor:pointer; padding:6px 14px; border-radius:4px; transition:all 0.3s; border-bottom:2px solid transparent; white-space:nowrap; }
+.nav-link:hover { background:rgba(184,149,80,0.1); color:var(--gold-deep); }
+.nav-link.active { border-bottom-color:var(--gold-bright); color:var(--gold-deep); }
+
+/* Layout */
+main { padding-top:160px; padding-bottom:80px; max-width:1440px; margin:0 auto; padding-inline:24px; }
+.page { display:none; animation:fadeInUp 0.6s ease forwards; }
+.page.active { display:block; }
+@keyframes fadeInUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes floatMedal { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
+@keyframes pulse { 0%,100% { box-shadow:0 0 24px rgba(212,175,55,0.3), inset 0 0 16px rgba(212,175,55,0.1); } 50% { box-shadow:0 0 48px rgba(212,175,55,0.7), inset 0 0 28px rgba(212,175,55,0.2); } }
+@keyframes rotateHalo { to { transform:translate(-50%,-50%) rotate(360deg); } }
+
+/* Panels */
+.panel { background:rgba(255,255,255,0.97); border-radius:12px; box-shadow:var(--shadow-soft); padding:48px; margin-bottom:32px; border:1px solid rgba(184,149,80,0.2); }
+.dark-panel { background:var(--navy); color:var(--white); position:relative; overflow:hidden; border:1px solid rgba(184,149,80,0.3); }
+.dark-panel::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650"><rect width="1235" height="650" fill="%23fff"/><g fill="%23b22234"><rect width="1235" height="50" y="0"/><rect width="1235" height="50" y="100"/><rect width="1235" height="50" y="200"/><rect width="1235" height="50" y="300"/><rect width="1235" height="50" y="400"/><rect width="1235" height="50" y="500"/><rect width="1235" height="50" y="600"/></g><rect width="494" height="350" fill="%233c3b6e"/></svg>'); opacity:0.08; z-index:0; }
+.dark-panel > * { position:relative; z-index:1; }
+
+/* Typography */
+.eyebrow { color:var(--gold-deep); font-weight:700; font-family:'Cinzel',serif; text-transform:uppercase; letter-spacing:2.5px; font-size:0.78rem; margin-bottom:12px; }
+h1, h2, h3, h4 { font-family:'Cinzel',serif; color:var(--navy); line-height:1.2; }
+h1 { font-size:clamp(1.8rem,4vw,2.8rem); margin-bottom:16px; }
+h2 { font-size:clamp(1.5rem,3vw,2.2rem); margin-bottom:20px; }
+h3 { font-size:1.2rem; margin-bottom:12px; }
+h4 { font-size:1rem; margin-bottom:8px; }
+p { margin-bottom:16px; }
+.italic-serif { font-family:'Cormorant Garamond',serif; font-style:italic; }
+.gold-text { background:var(--gold-gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.text-center { text-align:center; }
+.muted { color:var(--grey); font-size:0.9rem; }
+
+/* Buttons */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 28px; font-family:'Cinzel',serif; font-weight:600; font-size:0.82rem; text-transform:uppercase; letter-spacing:1.2px; border:none; cursor:pointer; border-radius:6px; transition:all 0.3s ease; margin:6px; text-decoration:none; font-weight:700; white-space:nowrap; }
+.btn-gold { background:var(--gold-gradient); color:var(--navy); box-shadow:0 4px 16px rgba(184,149,80,0.35); }
+.btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(184,149,80,0.5); }
+.btn-outline { background:transparent; color:var(--navy); border:2px solid var(--gold); }
+.btn-outline:hover { background:var(--navy); color:var(--gold-bright); }
+.btn-navy { background:var(--navy); color:var(--white); border:2px solid var(--navy); }
+.btn-navy:hover { background:transparent; color:var(--navy); }
+.btn-white-outline { background:transparent; color:var(--white); border:2px solid var(--white); }
+.btn-white-outline:hover { background:var(--white); color:var(--navy); }
+.btn-lg { padding:18px 40px; font-size:0.9rem; }
+
+/* Cards */
+.card { background:var(--white); border-radius:10px; padding:28px; box-shadow:var(--shadow-soft); border-top:3px solid var(--gold-bright); transition:all 0.3s; }
+.card:hover { transform:translateY(-6px); box-shadow:var(--shadow-gold); }
+.icon-circle { width:54px; height:54px; background:var(--gold-gradient); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--navy); font-size:1.4rem; margin-bottom:16px; box-shadow:0 4px 12px rgba(184,149,80,0.3); }
+.status-pill { display:inline-flex; align-items:center; gap:6px; padding:5px 14px; background:var(--gold-pale); color:var(--gold-deep); border-radius:20px; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+
+/* Forms */
+.form-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.form-group { display:flex; flex-direction:column; margin-bottom:16px; }
+.form-group.full { grid-column:1 / -1; }
+.form-label { font-weight:600; margin-bottom:6px; font-size:0.88rem; color:var(--navy); }
+.form-label .req { color:var(--red); }
+.form-input, .form-select, .form-textarea { padding:12px 16px; border:1.5px solid #d0d4dc; border-radius:6px; font-family:inherit; font-size:0.95rem; transition:all 0.3s; background:var(--white); width:100%; }
+.form-input:focus, .form-select:focus, .form-textarea:focus { outline:none; border-color:var(--gold-bright); box-shadow:0 0 0 3px rgba(212,175,55,0.15); }
+.form-textarea { min-height:100px; resize:vertical; }
+.form-checkbox { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; padding:14px; background:var(--ivory); border-radius:6px; border:1px solid rgba(184,149,80,0.2); }
+.form-checkbox input { margin-top:3px; width:18px; height:18px; accent-color:var(--gold); }
+.form-checkbox label { cursor:pointer; font-size:0.9rem; line-height:1.5; }
+.file-upload { border:2px dashed var(--gold); padding:32px; text-align:center; border-radius:8px; cursor:pointer; background:rgba(248,246,240,0.5); transition:all 0.3s; }
+.file-upload:hover { background:rgba(184,149,80,0.1); border-color:var(--gold-deep); }
+.file-upload i { font-size:2.5rem; color:var(--gold); margin-bottom:12px; }
+
+/* Timeline */
+.timeline { position:relative; padding-inline-start:40px; margin:32px 0; }
+.timeline::before { content:''; position:absolute; top:0; bottom:0; inset-inline-start:0; width:3px; background:linear-gradient(to bottom, var(--green) 0%, var(--gold-bright) 45%, var(--grey) 100%); }
+.timeline-item { position:relative; margin-bottom:32px; }
+.timeline-dot { position:absolute; inset-inline-start:-49px; top:4px; width:18px; height:18px; border-radius:50%; background:var(--grey); border:3px solid var(--white); box-shadow:0 0 0 2px var(--grey); }
+.timeline-dot.done { background:var(--green); box-shadow:0 0 0 2px var(--green); }
+.timeline-dot.done::after { content:'✓'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:10px; font-weight:bold; }
+.timeline-dot.current { background:var(--gold-bright); box-shadow:0 0 0 2px var(--gold-bright), 0 0 12px var(--gold-bright); }
+.timeline-card { background:var(--white); padding:20px 24px; border-radius:8px; border-inline-start:3px solid var(--grey); box-shadow:var(--shadow-soft); }
+.timeline-card.done { border-inline-start-color:var(--green); }
+.timeline-card.current { border-inline-start-color:var(--gold-bright); }
+.timeline-card h4 { margin-bottom:6px; color:var(--navy); }
+.timeline-card p { margin:0; font-size:0.9rem; color:var(--grey); }
+
+/* Step Indicator */
+.step-indicator { display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:32px; flex-wrap:wrap; }
+.step-node { display:flex; flex-direction:column; align-items:center; gap:8px; flex:1; min-width:100px; }
+.step-circle { width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cinzel',serif; font-weight:700; font-size:1.1rem; border:3px solid var(--grey); background:var(--white); color:var(--grey); transition:all 0.3s; }
+.step-node.active .step-circle { border-color:var(--gold-bright); background:var(--gold-gradient); color:var(--navy); box-shadow:0 0 16px rgba(212,175,55,0.4); }
+.step-node.done .step-circle { border-color:var(--green); background:var(--green); color:white; }
+.step-node.done .step-circle::after { content:'✓'; }
+.step-node.done .step-circle span { display:none; }
+.step-label { font-size:0.75rem; font-weight:600; color:var(--grey); text-transform:uppercase; letter-spacing:0.5px; text-align:center; }
+.step-node.active .step-label { color:var(--gold-deep); }
+.step-node.done .step-label { color:var(--green); }
+.step-line { flex:0 0 30px; height:3px; background:var(--grey-light); }
+.step-line.done { background:var(--green); }
+
+/* Gallery */
+.gallery { position:relative; max-width:900px; margin:0 auto 32px; border:4px solid var(--gold); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-dark); background:var(--navy-deep); }
+.gallery-main { width:100%; height:400px; position:relative; overflow:hidden; }
+.gallery-slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 0.6s ease; background-size:cover; background-position:center; }
+.gallery-slide.active { opacity:1; }
+.gallery-nav { position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border-radius:50%; background:rgba(16,29,53,0.85); border:2px solid var(--gold); color:var(--gold-bright); font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.3s; z-index:10; }
+.gallery-nav:hover { background:var(--gold); color:var(--navy); }
+.gallery-prev { inset-inline-start:16px; }
+.gallery-next { inset-inline-end:16px; }
+.gallery-caption { position:absolute; bottom:0; left:0; width:100%; padding:16px; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); color:white; text-align:center; font-family:'Cinzel',serif; font-size:1rem; }
+.gallery-thumbs { display:flex; gap:8px; padding:12px; background:var(--navy-deep); justify-content:center; }
+.gallery-thumb { width:80px; height:50px; border-radius:4px; cursor:pointer; border:2px solid transparent; background-size:cover; background-position:center; transition:all 0.3s; opacity:0.6; }
+.gallery-thumb:hover { opacity:1; }
+.gallery-thumb.active { border-color:var(--gold-bright); opacity:1; }
+
+/* Recognition Cards */
+.recognition-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:20px; margin-top:24px; }
+.recognition-card { background:var(--white); border-radius:10px; overflow:hidden; border:1px solid rgba(184,149,80,0.25); box-shadow:var(--shadow-soft); transition:all 0.3s; display:flex; flex-direction:column; }
+.recognition-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-gold); }
+.recognition-card.featured { grid-column:span 2; border:2px solid var(--gold); }
+.recognition-icon-area { height:140px; background:linear-gradient(135deg, var(--navy), var(--navy-darker)); display:flex; align-items:center; justify-content:center; border-bottom:2px solid var(--gold); gap:12px; flex-wrap:wrap; padding:16px; }
+.recognition-icon-area i { color:var(--gold-bright); font-size:2.5rem; }
+.recognition-icon-area .icon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.recognition-icon-area .icon-grid i { font-size:1.6rem; }
+.recognition-body { padding:20px; flex:1; display:flex; flex-direction:column; }
+.recognition-body h4 { color:var(--navy); margin-bottom:8px; font-size:1.05rem; }
+.recognition-body p { font-size:0.85rem; color:var(--grey); margin-bottom:14px; flex:1; }
+.recognition-amount { font-family:'Cinzel',serif; font-size:2rem; font-weight:700; background:var(--gold-gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:8px; }
+
+/* Countdown */
+.countdown-container { display:flex; flex-direction:column; align-items:center; padding:48px 24px; }
+.countdown-ring-wrapper { position:relative; width:280px; height:280px; margin-bottom:32px; }
+.countdown-ring-svg { width:100%; height:100%; transform:rotate(-90deg); }
+.countdown-ring-bg { stroke:rgba(255,255,255,0.1); }
+.countdown-ring-progress { stroke:url(#goldGradient); transition:stroke-dashoffset 1s linear; }
+.countdown-display { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; }
+.countdown-time { font-family:'Cinzel',serif; font-size:4rem; font-weight:900; color:var(--gold-bright); line-height:1; text-shadow:0 0 20px rgba(212,175,55,0.5); }
+.countdown-label { font-size:0.8rem; color:var(--silver); text-transform:uppercase; letter-spacing:2px; margin-top:8px; }
+.countdown-complete { display:none; text-align:center; padding:32px; background:rgba(80,123,96,0.15); border:2px solid var(--green); border-radius:12px; margin-bottom:24px; }
+.countdown-complete.show { display:block; animation:fadeInUp 0.6s ease; }
+.countdown-complete i { font-size:3rem; color:var(--green-light); margin-bottom:16px; }
+.countdown-complete h3 { color:var(--green-light); margin-bottom:8px; }
+
+/* Dashboard Stats */
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:32px; }
+.stat-card { background:var(--white); border-radius:8px; padding:24px; border-top:3px solid var(--gold-bright); box-shadow:var(--shadow-soft); display:flex; align-items:center; gap:16px; }
+.stat-card .stat-icon { width:48px; height:48px; border-radius:50%; background:var(--gold-gradient); display:flex; align-items:center; justify-content:center; color:var(--navy); font-size:1.2rem; flex-shrink:0; }
+.stat-info h4 { font-size:0.78rem; color:var(--grey); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
+.stat-info .stat-value { font-family:'Cinzel',serif; font-size:1.4rem; font-weight:700; color:var(--navy); }
+
+/* Table */
+.manifest-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:8px; overflow:hidden; box-shadow:var(--shadow-soft); margin:24px 0; }
+.manifest-table thead { background:var(--navy); }
+.manifest-table th { padding:14px 16px; text-align:start; color:var(--gold-bright); font-family:'Cinzel',serif; font-size:0.78rem; text-transform:uppercase; letter-spacing:1px; font-weight:600; }
+.manifest-table td { padding:14px 16px; border-bottom:1px solid var(--grey-light); font-size:0.9rem; color:var(--navy); }
+.manifest-table tbody tr:hover { background:var(--ivory); }
+.manifest-table tbody tr:last-child td { border-bottom:none; }
+
+/* Glowing Email */
+.email-section { margin-top:48px; padding:64px 24px; text-align:center; background:radial-gradient(circle at center, rgba(212,175,55,0.15) 0%, var(--navy-darker) 70%); border:4px solid transparent; border-image:linear-gradient(45deg, #F7E7B4, #D4AF37, #B89550, #D4AF37, #F7E7B4, #B89550) 1; box-shadow:0 0 32px rgba(212,175,55,0.3); position:relative; overflow:hidden; border-radius:12px; }
+.email-halo { position:absolute; top:50%; left:50%; width:400px; height:400px; transform:translate(-50%,-50%); background:conic-gradient(from 0deg, transparent 0deg, rgba(212,175,55,0.2) 90deg, transparent 180deg, rgba(212,175,55,0.2) 270deg, transparent 360deg); animation:rotateHalo 14s linear infinite; z-index:0; pointer-events:none; }
+.email-content { position:relative; z-index:1; }
+.email-heading { font-family:'Cinzel',serif; color:var(--gold-champagne); font-size:1.4rem; letter-spacing:3px; margin-bottom:16px; text-shadow:0 0 12px rgba(212,175,55,0.6); }
+.email-subtitle { color:var(--silver); margin-bottom:32px; }
+.email-link { display:inline-flex; align-items:center; gap:12px; font-family:'Inter',sans-serif; font-weight:900; font-size:clamp(1rem, 3vw, 1.8rem); color:var(--gold-bright); text-decoration:none; background:rgba(10,20,36,0.8); padding:18px 36px; border-radius:10px; border:1.5px solid var(--gold); animation:pulse 2.2s infinite; transition:transform 0.3s; word-break:break-all; max-width:100%; }
+.email-link:hover { transform:scale(1.02); color:var(--gold-pale); }
+.email-link i { font-size:1.4rem; flex-shrink:0; }
+
+/* FAQ */
+.faq-item { background:var(--white); border:1px solid rgba(184,149,80,0.2); border-radius:8px; margin-bottom:12px; overflow:hidden; transition:all 0.3s; }
+.faq-item.open { border-color:var(--gold-bright); box-shadow:var(--shadow-soft); }
+.faq-question { padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; font-weight:600; color:var(--navy); font-family:'Cinzel',serif; font-size:0.95rem; transition:background 0.3s; }
+.faq-question:hover { background:rgba(184,149,80,0.05); }
+.faq-item.open .faq-question { background:rgba(184,149,80,0.08); }
+.faq-chevron { color:var(--gold); transition:transform 0.3s; flex-shrink:0; }
+.faq-item.open .faq-chevron { transform:rotate(180deg); }
+.faq-answer { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.3s ease; padding:0 24px; color:var(--grey); line-height:1.7; font-size:0.92rem; }
+.faq-item.open .faq-answer { max-height:300px; padding:0 24px 20px; }
+
+/* Verification */
+.verify-result { margin-top:24px; padding:24px; border-radius:8px; display:none; animation:fadeInUp 0.5s ease forwards; }
+.verify-result.show { display:block; }
+.verify-result.success { background:rgba(80,123,96,0.1); border:2px solid var(--green); }
+.verify-result.pending { background:rgba(212,175,55,0.1); border:2px solid var(--gold-bright); }
+.verify-result.error { background:rgba(178,34,52,0.1); border:2px solid var(--red); }
+.verify-result i { font-size:2rem; margin-bottom:12px; }
+.verify-result.success i { color:var(--green); }
+.verify-result.pending i { color:var(--gold-bright); }
+.verify-result.error i { color:var(--red); }
+.verify-result h3 { margin-bottom:8px; }
+
+/* Footer */
+footer { background:var(--navy); color:var(--white); padding:48px 24px 24px; border-top:3px solid var(--gold); position:relative; overflow:hidden; margin-top:64px; }
+footer::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650"><rect width="1235" height="650" fill="%23fff"/><g fill="%23b22234"><rect width="1235" height="50" y="0"/><rect width="1235" height="50" y="100"/><rect width="1235" height="50" y="200"/><rect width="1235" height="50" y="300"/><rect width="1235" height="50" y="400"/><rect width="1235" height="50" y="500"/><rect width="1235" height="50" y="600"/></g><rect width="494" height="350" fill="%233c3b6e"/></svg>'); opacity:0.05; pointer-events:none; }
+footer > * { position:relative; z-index:1; }
+.footer-content { max-width:1440px; margin:0 auto; text-align:center; }
+.footer-crest { font-family:'Cinzel',serif; color:var(--gold-bright); font-size:1.1rem; letter-spacing:3px; margin-bottom:8px; }
+.footer-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 20px; margin:20px 0; }
+.footer-nav a { color:var(--gold-champagne); text-decoration:none; font-size:0.82rem; cursor:pointer; }
+.footer-nav a:hover { text-decoration:underline; }
+.footer-bottom { font-size:0.75rem; color:var(--grey); margin-top:16px; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-link { font-size:0.68rem; padding:6px 10px; }
+  .recognition-card.featured { grid-column:span 1; }
+}
+@media (max-width: 860px) {
+  .nav-links { display:none; position:absolute; top:100%; left:0; width:100%; background:var(--ivory); flex-direction:column; padding:16px; box-shadow:var(--shadow-dark); border-top:2px solid var(--gold); gap:4px; }
+  .nav-links.show { display:flex; }
+  .nav-link { padding:12px 16px; width:100%; border-radius:6px; font-size:0.8rem; }
+  .mobile-toggle { display:block; }
+  .brand-text { display:none; }
+  main { padding-top:120px; padding-inline:16px; }
+  .panel { padding:24px; }
+  .form-grid-2 { grid-template-columns:1fr; }
+  .gallery-main { height:250px; }
+  .gallery-thumb { width:60px; height:40px; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .countdown-ring-wrapper { width:220px; height:220px; }
+  .countdown-time { font-size:3rem; }
+  .step-indicator { gap:4px; }
+  .step-node { min-width:60px; }
+  .step-circle { width:36px; height:36px; font-size:0.9rem; }
+  .step-label { font-size:0.65rem; }
+  .step-line { flex:0 0 16px; }
+  .manifest-table { font-size:0.78rem; }
+  .manifest-table th, .manifest-table td { padding:10px 8px; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns:1fr; }
+  .gallery-main { height:200px; }
+  .recognition-grid { grid-template-columns:1fr; }
+  .btn { padding:12px 20px; font-size:0.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+}
+</style>
+</head>
+<body class="ltr">
+
+<div class="flag-bg"></div>
+<div class="flag-overlay"></div>
+
+<header>
+  <div class="nav-container">
+    <div class="nav-top">
+      <div class="brand" onclick="navigate('home')">
+        <div class="medal-emblem">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#172B4D"/><stop offset="100%" style="stop-color:#0A1424"/></linearGradient>
+              <radialGradient id="medalGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" style="stop-color:#F7E7B4"/><stop offset="50%" style="stop-color:#D4AF37"/><stop offset="100%" style="stop-color:#8B6F2C"/></radialGradient>
+            </defs>
+            <path d="M 35,5 L 50,35 L 65,5 L 60,5 L 50,22 L 40,5 Z" fill="url(#ribbonGrad)"/>
+            <circle cx="50" cy="55" r="32" fill="url(#medalGrad)" stroke="#8B6F2C" stroke-width="1"/>
+            <circle cx="50" cy="55" r="26" fill="none" stroke="#8B6F2C" stroke-width="0.5" opacity="0.6"/>
+            <path d="M 50,38 L 53,48 L 63,48 L 55,54 L 58,64 L 50,58 L 42,64 L 45,54 L 37,48 L 47,48 Z" fill="#172B4D" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="brand-text" data-en="WOUNDED MILITARY HEROES" data-he="גיבורים צבאים פצועים">WOUNDED MILITARY HEROES</div>
+      </div>
+      <div class="nav-right">
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">🇺🇸 EN</button>
+          <button class="lang-btn" data-lang="he" onclick="setLanguage('he')">🇮🇱 עב</button>
+        </div>
+        <button class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-link active" onclick="navigate('home')" data-en="Home" data-he="דף הבית">Home</div>
+      <div class="nav-link" onclick="navigate('about')" data-en="About" data-he="אודות">About</div>
+      <div class="nav-link" onclick="navigate('recognition')" data-en="Recognition" data-he="הוקרה">Recognition</div>
+      <div class="nav-link" onclick="navigate('soldier')" data-en="Soldier's Voice" data-he="קול החיילת">Soldier's Voice</div>
+      <div class="nav-link" onclick="navigate('application')" data-en="Apply" data-he="הגשת בקשה">Apply</div>
+      <div class="nav-link" onclick="navigate('dashboard')" data-en="Dashboard" data-he="לוח בקרה">Dashboard</div>
+      <div class="nav-link" onclick="navigate('delivery')" data-en="Delivery" data-he="משלוחים">Delivery</div>
+      <div class="nav-link" onclick="navigate('verification')" data-en="Verification" data-he="אימות">Verification</div>
+      <div class="nav-link" onclick="navigate('resources')" data-en="Resources" data-he="משאבים">Resources</div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- PAGE 1: HOME -->
+  <div id="page-home" class="page active">
+    <div class="panel dark-panel" style="text-align:center; padding:64px 40px;">
+      <div style="width:120px; height:120px; margin:0 auto 24px; animation:floatMedal 5s ease-in-out infinite;">
+        <svg viewBox="0 0 100 100" style="width:100%; height:100%;">
+          <defs><radialGradient id="heroMedalGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" style="stop-color:#F7E7B4"/><stop offset="50%" style="stop-color:#D4AF37"/><stop offset="100%" style="stop-color:#8B6F2C"/></radialGradient></defs>
+          <path d="M 30,2 L 50,32 L 70,2 L 62,2 L 50,18 L 38,2 Z" fill="#172B4D"/>
+          <circle cx="50" cy="55" r="35" fill="url(#heroMedalGrad)" stroke="#8B6F2C" stroke-width="1.5"/>
+          <circle cx="50" cy="55" r="28" fill="none" stroke="#8B6F2C" stroke-width="0.8" opacity="0.5"/>
+          <path d="M 50,36 L 54,48 L 66,48 L 56,56 L 60,68 L 50,60 L 40,68 L 44,56 L 34,48 L 46,48 Z" fill="#172B4D"/>
+        </svg>
+      </div>
+      <h1 style="color:white;" data-en="WOUNDED <span class='gold-text'>MILITARY HEROES</span>" data-he="גיבורים <span class='gold-text'>צבאים פצועים</span>">WOUNDED <span class="gold-text">MILITARY HEROES</span></h1>
+      <p class="italic-serif" style="color:var(--gold-champagne); font-size:1.3rem; margin-bottom:24px;" data-en="Honoring Courage. Recognizing Sacrifice. Supporting Recovery." data-he="מכבדים גבורה. מכירים בהקרבה. תומכים בהחלמה.">Honoring Courage. Recognizing Sacrifice. Supporting Recovery.</p>
+      <p style="color:#ccc; max-width:800px; margin:0 auto 32px;" data-en="A respectful digital space dedicated to providing information, administrative guidance and proposed recognition opportunities for wounded female military personnel and their families." data-he="מרחב דיגיטלי מכבד המוקדש למתן מידע, הדרכה מנהלית והזדמנויות הוקרה מוצעות עבור חיילות פצועות ומשפחותיהן.">A respectful digital space dedicated to providing information, administrative guidance and proposed recognition opportunities for wounded female military personnel and their families.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:8px;">
+        <button class="btn btn-gold" onclick="navigate('about')" data-en="Explore the Programme" data-he="גלו את התכנית">Explore the Programme</button>
+        <button class="btn btn-white-outline" onclick="navigate('application')" data-en="Family Representative Application" data-he="הגשת בקשה כנציג משפחה">Family Representative Application</button>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-top:32px;">
+      <div class="card"><div class="icon-circle"><i class="fas fa-hands-helping"></i></div><h3 data-en="Dignified Care" data-he="טיפול מכבד">Dignified Care</h3><p data-en="Compassionate support and respect for wounded service members." data-he="תמיכה וכבוד חומלים לחיילים פצועים.">Compassionate support and respect for wounded service members.</p></div>
+      <div class="card"><div class="icon-circle"><i class="fas fa-users"></i></div><h3 data-en="Family Representation" data-he="ייצוג משפחתי">Family Representation</h3><p data-en="Assistance from authorized family representatives." data-he="סיוע מנציגי משפחה מורשים.">Assistance from authorized family representatives.</p></div>
+      <div class="card"><div class="icon-circle"><i class="fas fa-shield-alt"></i></div><h3 data-en="Transparent Administration" data-he="מנהל שקוף">Transparent Administration</h3><p data-en="Clear processes and honest communication." data-he="תהליכים ברורים ותקשורת כנה.">Clear processes and honest communication.</p></div>
+      <div class="card"><div class="icon-circle"><i class="fas fa-award"></i></div><h3 data-en="Recognition & Appreciation" data-he="הוקרה והערכה">Recognition & Appreciation</h3><p data-en="Honoring service through proposed recognition opportunities." data-he="כיבוד שירות באמצעות הזדמנויות הוקרה מוצעות.">Honoring service through proposed recognition opportunities.</p></div>
+      <div class="card"><div class="icon-circle"><i class="fas fa-heart"></i></div><h3 data-en="Wellness & Recovery" data-he="רווחה והחלמה">Wellness & Recovery</h3><p data-en="Long-term rehabilitation and wellness support." data-he="תמיכה ארוכת טווח בשיקום ורווחה.">Long-term rehabilitation and wellness support.</p></div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: ABOUT -->
+  <div id="page-about" class="page">
+    <div class="panel">
+      <div class="eyebrow" data-en="Programme Overview" data-he="סקירת התכנית">Programme Overview</div>
+      <h2 data-en="Understanding the <span class='gold-text'>Programme</span>" data-he="הבנת <span class='gold-text'>התכנית</span>">Understanding the <span class="gold-text">Programme</span></h2>
+      <p data-en="The recognition programme follows a structured seven-stage process, from initial enquiry to ongoing wellness support. Each stage is designed to ensure transparency, dignity, and proper verification." data-he="תכנית ההוקרה עוקבת אחר תהליך מובנה בן שבעה שלבים, מפנייה ראשונית ועד תמיכה שוטפת ברווחה. כל שלב נועד להבטיח שקיפות, כבוד ואימות נאות.">The recognition programme follows a structured seven-stage process, from initial enquiry to ongoing wellness support. Each stage is designed to ensure transparency, dignity, and proper verification.</p>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="1. Initial Representative Enquiry" data-he="1. פנייה ראשונית של נציג">1. Initial Representative Enquiry</h4><p data-en="A family representative expresses interest in assisting the wounded soldier." data-he="נציג משפחה מביע עניין בסיוע לחיילת הפצועה.">A family representative expresses interest in assisting the wounded soldier.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="2. Eligibility & Identity Review" data-he="2. סקירת זכאות וזהות">2. Eligibility & Identity Review</h4><p data-en="The identities and authorization of the representative and soldier are verified." data-he="זהות והרשאת הנציג והחיילת מאומתות.">The identities and authorization of the representative and soldier are verified.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="3. Documentation Assessment" data-he="3. הערכת מסמכים">3. Documentation Assessment</h4><p data-en="Required application documents are reviewed by programme administrators." data-he="מסמכי הבקשה הנדרשים נסקרים על ידי מנהלי התכנית.">Required application documents are reviewed by programme administrators.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot current"></div><div class="timeline-card current"><h4 data-en="4. Administrative Verification" data-he="4. אימות מנהלי">4. Administrative Verification</h4><p data-en="The responsible organization evaluates the application against its requirements." data-he="הארגון האחראי מעריך את הבקשה מול דרישותיו.">The responsible organization evaluates the application against its requirements.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="5. Recognition Review" data-he="5. סקירת הוקרה">5. Recognition Review</h4><p data-en="Proposed recognition opportunities are reviewed and assessed." data-he="הזדמנויות הוקרה מוצעות נסקרות ומוערכות.">Proposed recognition opportunities are reviewed and assessed.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="6. Delivery Planning" data-he="6. תכנון משלוח">6. Delivery Planning</h4><p data-en="Arrangements for approved recognition items are coordinated." data-he="מתואמים סידורים לפריטי הוקרה מאושרים.">Arrangements for approved recognition items are coordinated.</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="7. Ongoing Wellness & Follow-up" data-he="7. רווחה שוטפת ומעקב">7. Ongoing Wellness & Follow-up</h4><p data-en="Recovery support and follow-up information are provided where applicable." data-he="מידע על תמיכה בהחלמה ומעקב מסופק במידת הצורך.">Recovery support and follow-up information are provided where applicable.</p></div></div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-outline" onclick="navigate('home')" data-en="Back to Home" data-he="חזרה לדף הבית">Back to Home</button>
+      <button class="btn btn-gold" onclick="navigate('recognition')" data-en="View Recognition Package" data-he="צפו בחבילת ההוקרה">View Recognition Package</button>
+    </div>
+  </div>
+
+  <!-- PAGE 3: RECOGNITION -->
+  <div id="page-recognition" class="page">
+    <div class="panel dark-panel" style="text-align:center; padding:40px;">
+      <div class="eyebrow" style="color:var(--gold-champagne);" data-en="Recognition Package" data-he="חבילת הוקרה">Recognition Package</div>
+      <h2 style="color:white;" data-en="THE PROPOSED <span class='gold-text'>RECOGNITION PACKAGE</span>" data-he="חבילת <span class='gold-text'>ההוקרה המוצעת</span>">THE PROPOSED <span class="gold-text">RECOGNITION PACKAGE</span></h2>
+      <p style="color:#ccc; max-width:700px; margin:0 auto;" data-en="The following items are proposed recognition opportunities. All items remain proposed until independently confirmed." data-he="הפריטים הבאים הם הזדמנויות הוקרה מוצעות. כל הפריטים נשארים מוצעים עד לאישור עצמאי.">The following items are proposed recognition opportunities. All items remain proposed until independently confirmed.</p>
+    </div>
+
+    <div class="gallery" id="teslaGallery">
+      <div class="gallery-main">
+        <div class="gallery-slide active" style="background-image:url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&q=80');" data-caption="Front Exterior View"></div>
+        <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1200&q=80');" data-caption="Side Profile View"></div>
+        <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1200&q=80');" data-caption="Interior View"></div>
+        <button class="gallery-nav gallery-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="gallery-nav gallery-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-caption" id="galleryCaption">Front Exterior View</div>
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb active" style="background-image:url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=200&q=80');" onclick="setSlide(0)"></div>
+        <div class="gallery-thumb" style="background-image:url('https://images.unsplash.com/photo-1617788138017-80ad40651399?w=200&q=80');" onclick="setSlide(1)"></div>
+        <div class="gallery-thumb" style="background-image:url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=200&q=80');" onclick="setSlide(2)"></div>
+      </div>
+    </div>
+
+    <div class="recognition-grid">
+      <div class="recognition-card featured">
+        <div class="recognition-icon-area"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="recognition-body">
+          <div class="recognition-amount">$120,000 USD</div>
+          <h4 data-en="Proposed Financial Recognition" data-he="הכרה כספית מוצעת">Proposed Financial Recognition</h4>
+          <p data-en="A proposed financial recognition benefit to support recovery, rehabilitation, and long-term stability." data-he="הטבת הכרה כספית מוצעת לתמיכה בהחלמה, שיקום ויציבות ארוכת טווח.">A proposed financial recognition benefit to support recovery, rehabilitation, and long-term stability.</p>
+          <span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED — NOT YET APPROVED" data-he="מוצע — טרם אושר">PROPOSED — NOT YET APPROVED</span></span>
+        </div>
+      </div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-car"></i></div><div class="recognition-body"><h4 data-en="Tesla Vehicle" data-he="רכב טסלה">Tesla Vehicle</h4><p data-en="A proposed vehicle to support mobility and independence." data-he="רכב מוצע לתמיכה בניידות ועצמאות.">A proposed vehicle to support mobility and independence.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-home"></i></div><div class="recognition-body"><h4 data-en="Housing Support" data-he="תמיכה בדיור">Housing Support</h4><p data-en="A proposed housing support benefit." data-he="הטבת תמיכה בדיור מוצעת.">A proposed housing support benefit.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><div class="icon-grid"><i class="fas fa-couch"></i><i class="fas fa-bed"></i><i class="fas fa-table"></i><i class="fas fa-snowflake"></i><i class="fas fa-washing-machine"></i><i class="fas fa-tv"></i></div></div><div class="recognition-body"><h4 data-en="Essential Home Furnishings" data-he="ריהוט ביתי חיוני">Essential Home Furnishings</h4><p data-en="Sofa, bed, dining table, refrigerator, washing machine, TV, kitchen essentials." data-he="ספה, מיטה, שולחן אוכל, מקרר, מכונת כביסה, טלוויזיה, כלי מטבח.">Sofa, bed, dining table, refrigerator, washing machine, TV, kitchen essentials.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-mobile-alt"></i></div><div class="recognition-body"><h4>iPhone</h4><p data-en="A proposed communication device." data-he="מכשיר תקשורת מוצע.">A proposed communication device.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-medal"></i></div><div class="recognition-body"><h4 data-en="Gold Military Recognition Medal" data-he="מדליית הוקרה צבאית זהב">Gold Military Recognition Medal</h4><p data-en="A symbolic medal of honour." data-he="מדליית כבוד סמלית.">A symbolic medal of honour.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-blender"></i></div><div class="recognition-body"><h4 data-en="Home Appliances" data-he="מכשירי חשמל">Home Appliances</h4><p data-en="Essential home appliances." data-he="מכשירי חשמל חיוניים.">Essential home appliances.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-spa"></i></div><div class="recognition-body"><h4 data-en="Personal Wellness Support" data-he="תמיכה ברווחה אישית">Personal Wellness Support</h4><p data-en="Wellness-inspired support." data-he="תמיכה מושרית רווחה.">Wellness-inspired support.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-medkit"></i></div><div class="recognition-body"><h4 data-en="Recovery & Rehabilitation Support" data-he="תמיכה בהחלמה ושיקום">Recovery & Rehabilitation Support</h4><p data-en="Medical support and rehabilitation materials." data-he="תמיכה רפואית וחומרי שיקום.">Medical support and rehabilitation materials.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+      <div class="recognition-card"><div class="recognition-icon-area"><i class="fas fa-house-user"></i></div><div class="recognition-body"><h4 data-en="Long-Term Family Support" data-he="תמיכה משפחתית ארוכת טווח">Long-Term Family Support</h4><p data-en="Ongoing family support resources." data-he="משאבי תמיכה משפחתיים שוטפים.">Ongoing family support resources.</p><span class="status-pill"><i class="far fa-clock"></i> <span data-en="PROPOSED" data-he="מוצע">PROPOSED</span></span></div></div>
+    </div>
+    <div class="text-center" style="margin-top:32px;">
+      <button class="btn btn-outline" onclick="navigate('about')" data-en="Back to About" data-he="חזרה לאודות">Back to About</button>
+      <button class="btn btn-navy" onclick="navigate('application')" data-en="Begin Application" data-he="התחלת בקשה">Begin Application</button>
+    </div>
+  </div>
+
+  <!-- PAGE 4: SOLDIER'S VOICE -->
+  <div id="page-soldier" class="page">
+    <div class="panel" style="position:relative; overflow:hidden;">
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:300px; height:300px; opacity:0.05; pointer-events:none;">
+        <svg viewBox="0 0 100 100" style="width:100%; height:100%;"><circle cx="50" cy="50" r="40" fill="#B89550"/><circle cx="50" cy="50" r="32" fill="none" stroke="#8B6F2C" stroke-width="1"/><path d="M 50,32 L 54,44 L 66,44 L 56,52 L 60,64 L 50,56 L 40,64 L 44,52 L 34,44 L 46,44 Z" fill="#172B4D"/></svg>
+      </div>
+      <div class="eyebrow" data-en="Soldier's Voice" data-he="קול החיילת">Soldier's Voice</div>
+      <h2 data-en="A <span class='gold-text'>Soldier's</span> Voice" data-he="קול <span class='gold-text'>החיילת</span>">A <span class="gold-text">Soldier's</span> Voice</h2>
+      <div style="border:2px solid var(--gold); padding:40px; border-radius:8px; background:rgba(255,255,255,0.95); position:relative; box-shadow:var(--shadow-soft);">
+        <i class="fas fa-feather" style="color:var(--gold); font-size:2rem; margin-bottom:20px;"></i>
+        <h3 style="margin-bottom:24px;" data-en="A Letter from the Frontline of Recovery" data-he="מכתב מקו החזית של ההחלמה">A Letter from the Frontline of Recovery</h3>
+        <blockquote class="italic-serif" style="font-size:1.15rem; line-height:1.9; color:var(--navy); margin-bottom:24px;" data-en="To everyone who has taken the time to understand my journey,<br><br>My military service has been an important part of my life. My injuries have made certain activities difficult, and there are times when I need assistance from my family.<br><br>I am grateful for the people who continue to stand beside me during my recovery.<br><br>Where I am unable to manage administrative matters personally, I wish to authorize my husband or another trusted family representative to assist with my application and communicate with the relevant programme administrators.<br><br>My hope is that wounded service members are treated with dignity, compassion, and respect.<br><br>Thank you for recognizing the courage of those who have served." data-he="לכל מי שטרח להבין את המסע שלי,<br><br>השירות הצבאי שלי היה חלק חשוב בחיי. הפציעות שלי הקשו על פעילויות מסוימות, וישנם זמנים שבהם אני זקוקה לסיוע ממשפחתי.<br><br>אני אסירת תודה לאנשים שממשיכים לעמוד לצידי במהלך ההחלמה.<br><br>במקרים שבהם איני מסוגלת לנהל עניינים מנהליים באופן אישי, ברצוני לאשר את בעלי או נציג משפחה מהימן אחר לסייע בבקשה שלי ולתקשר עם מנהלי התכנית הרלוונטיים.<br><br>תקוותי היא שחיילים פצועים יזכו ליחס של כבוד, חמלה והערכה.<br><br>תודה לכם על הכרת האומץ של אלו ששירתו.">To everyone who has taken the time to understand my journey,<br><br>My military service has been an important part of my life. My injuries have made certain activities difficult, and there are times when I need assistance from my family.<br><br>I am grateful for the people who continue to stand beside me during my recovery.<br><br>Where I am unable to manage administrative matters personally, I wish to authorize my husband or another trusted family representative to assist with my application and communicate with the relevant programme administrators.<br><br>My hope is that wounded service members are treated with dignity, compassion, and respect.<br><br>Thank you for recognizing the courage of those who have served.</blockquote>
+        <p class="signature" style="text-align:end; font-weight:600; font-style:italic; color:var(--navy);" data-en="— With gratitude, A Wounded Service Member" data-he="— בתודה, חיילת פצועה">— With gratitude, A Wounded Service Member</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-outline" onclick="navigate('recognition')" data-en="Back to Recognition" data-he="חזרה להוקרה">Back to Recognition</button>
+      <button class="btn btn-gold" onclick="navigate('application')" data-en="Apply as Representative" data-he="הגשת בקשה כנציג">Apply as Representative</button>
+    </div>
+  </div>
+
+  <!-- PAGE 5: APPLICATION -->
+  <div id="page-application" class="page">
+    <div class="panel">
+      <div class="eyebrow" data-en="Family Representative Application" data-he="בקשת נציג משפחה">Family Representative Application</div>
+      <h2 data-en="Application & <span class='gold-text'>Registration Portal</span>" data-he="פורטל <span class='gold-text'>בקשות והרשמה</span>">Application & <span class="gold-text">Registration Portal</span></h2>
+      
+      <div class="step-indicator" id="stepIndicator">
+        <div class="step-node active" data-step="1"><div class="step-circle"><span>1</span></div><div class="step-label" data-en="Representative" data-he="נציג">Representative</div></div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="2"><div class="step-circle"><span>2</span></div><div class="step-label" data-en="Soldier Info" data-he="פרטי חיילת">Soldier Info</div></div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="3"><div class="step-circle"><span>3</span></div><div class="step-label" data-en="Review" data-he="סקירה">Review</div></div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="4"><div class="step-circle"><span>4</span></div><div class="step-label" data-en="Status" data-he="סטטוס">Status</div></div>
+      </div>
+
+      <!-- Step 1 -->
+      <div id="formStep1" class="form-step active">
+        <h3 data-en="Step 1: Representative Information" data-he="שלב 1: פרטי הנציג">Step 1: Representative Information</h3>
+        <div class="form-grid-2" style="margin-top:20px;">
+          <div class="form-group full"><label class="form-label" data-en="Full Legal Name <span class='req'>*</span>" data-he="שם מלא חוקי <span class='req'>*</span>">Full Legal Name <span class="req">*</span></label><input type="text" class="form-input" id="repName" data-en-ph="Enter your full legal name" data-he-ph="הכנס את שמך המלא החוקי"></div>
+          <div class="form-group"><label class="form-label" data-en="Relationship to Soldier <span class='req'>*</span>" data-he="קרבה לחיילת <span class='req'>*</span>">Relationship to Soldier <span class="req">*</span></label><select class="form-select" id="repRelationship"><option data-en="Select..." data-he="בחר...">Select...</option><option data-en="Husband" data-he="בעל">Husband</option><option data-en="Wife" data-he="אישה">Wife</option><option data-en="Parent" data-he="הורה">Parent</option><option data-en="Sibling" data-he="אח/ות">Sibling</option><option data-en="Legal Guardian" data-he="אפוטרופוס חוקי">Legal Guardian</option></select></div>
+          <div class="form-group"><label class="form-label" data-en="Email Address <span class='req'>*</span>" data-he="כתובת דוא״ל <span class='req'>*</span>">Email Address <span class="req">*</span></label><input type="email" class="form-input" id="repEmail" data-en-ph="email@example.com" data-he-ph="דוא״ל@דוגמה.קום"></div>
+          <div class="form-group"><label class="form-label" data-en="Telephone Number <span class='req'>*</span>" data-he="מספר טלפון <span class='req'>*</span>">Telephone Number <span class="req">*</span></label><input type="tel" class="form-input" id="repPhone" data-en-ph="+1 (555) 000-0000" data-he-ph="+972 50 000 0000"></div>
+          <div class="form-group"><label class="form-label" data-en="Country of Residence <span class='req'>*</span>" data-he="מדינת מגורים <span class='req'>*</span>">Country of Residence <span class="req">*</span></label><select class="form-select" id="repCountry"><option data-en="Select..." data-he="בחר...">Select...</option><option data-en="United States" data-he="ארצות הברית">United States</option><option data-en="United Kingdom" data-he="הממלכה המאוחדת">United Kingdom</option><option data-en="Canada" data-he="קנדה">Canada</option><option data-en="Australia" data-he="אוסטרליה">Australia</option><option data-en="Israel" data-he="ישראל">Israel</option><option data-en="Other" data-he="אחר">Other</option></select></div>
+        </div>
+        <div class="text-center" style="margin-top:24px;"><button class="btn btn-gold" onclick="goToStep(2)" data-en="Continue to Soldier Details" data-he="המשך לפרטי החיילת">Continue to Soldier Details</button></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div id="formStep2" class="form-step" style="display:none;">
+        <h3 data-en="Step 2: Soldier Information" data-he="שלב 2: פרטי החיילת">Step 2: Soldier Information</h3>
+        <div class="form-grid-2" style="margin-top:20px;">
+          <div class="form-group"><label class="form-label" data-en="Soldier's Full Name <span class='req'>*</span>" data-he="שם מלא של החיילת <span class='req'>*</span>">Soldier's Full Name <span class="req">*</span></label><input type="text" class="form-input" id="soldierName" data-en-ph="Soldier's full name" data-he-ph="שם מלא של החיילת"></div>
+          <div class="form-group"><label class="form-label" data-en="Military Service Number <span class='req'>*</span>" data-he="מספר שירות צבאי <span class='req'>*</span>">Military Service Number <span class="req">*</span></label><input type="text" class="form-input" id="soldierService" data-en-ph="Service number" data-he-ph="מספר שירות"></div>
+          <div class="form-group"><label class="form-label" data-en="Branch of Service <span class='req'>*</span>" data-he="ענף שירות <span class='req'>*</span>">Branch of Service <span class="req">*</span></label><select class="form-select" id="soldierBranch"><option data-en="Select..." data-he="בחר...">Select...</option><option data-en="Army" data-he="צבא היבשה">Army</option><option data-en="Navy" data-he="חיל הים">Navy</option><option data-en="Air Force" data-he="חיל האוויר">Air Force</option><option data-en="Marines" data-he="חיל הנחתים">Marines</option></select></div>
+          <div class="form-group"><label class="form-label" data-en="Country of Service <span class='req'>*</span>" data-he="מדינת שירות <span class='req'>*</span>">Country of Service <span class="req">*</span></label><select class="form-select" id="soldierCountry"><option data-en="Select..." data-he="בחר...">Select...</option><option data-en="United States" data-he="ארצות הברית">United States</option><option data-en="Israel" data-he="ישראל">Israel</option><option data-en="Other" data-he="אחר">Other</option></select></div>
+          <div class="form-group full"><label class="form-label" data-en="Supporting Authorization Documents <span class='req'>*</span>" data-he="מסמכי הרשאה תומכים <span class='req'>*</span>">Supporting Authorization Documents <span class="req">*</span></label><div class="file-upload" onclick="document.getElementById('fileInput').click()"><i class="fas fa-cloud-upload-alt"></i><p data-en="Click to upload or drag a file here" data-he="לחץ להעלות או גרור קובץ לכאן">Click to upload or drag a file here</p><p class="muted" style="font-size:0.8rem;" data-en="PDF, JPG, PNG — max 10MB" data-he="PDF, JPG, PNG — עד 10MB">PDF, JPG, PNG — max 10MB</p><input type="file" id="fileInput" style="display:none;" onchange="document.getElementById('fileName').textContent = this.files[0] ? this.files[0].name : '';"><p id="fileName" style="margin-top:8px; color:var(--green); font-weight:600;"></p></div></div>
+        </div>
+        <div class="text-center" style="margin-top:24px;"><button class="btn btn-outline" onclick="goToStep(1)" data-en="Back" data-he="חזור">Back</button><button class="btn btn-gold" onclick="goToStep(3)" data-en="Review Application" data-he="סקירת הבקשה">Review Application</button></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div id="formStep3" class="form-step" style="display:none;">
+        <h3 data-en="Step 3: Review Information" data-he="שלב 3: סקירת מידע">Step 3: Review Information</h3>
+        <div style="background:var(--ivory); padding:24px; border-radius:8px; margin-top:20px;" id="reviewPanel"><p style="color:var(--grey); text-align:center;" data-en="Please complete Steps 1 and 2 to review your information." data-he="נא להשלים את שלבים 1 ו-2 כדי לסקור את המידע שלך.">Please complete Steps 1 and 2 to review your information.</p></div>
+        <div class="form-checkbox" style="margin-top:24px;"><input type="checkbox" id="privacyAck"><label for="privacyAck" data-en="I acknowledge the privacy policy and confirm that the information provided is accurate and complete." data-he="אני מאשר/ת את מדיניות הפרטיות ומאשר/ת שהמידע שסופק מדויק ומלא.">I acknowledge the privacy policy and confirm that the information provided is accurate and complete.</label></div>
+        <div class="text-center" style="margin-top:24px;"><button class="btn btn-outline" onclick="goToStep(2)" data-en="Back" data-he="חזור">Back</button><button class="btn btn-gold" onclick="submitApplication()" data-en="Submit Application" data-he="שלח בקשה">Submit Application</button></div>
+      </div>
+
+      <!-- Step 4: Countdown -->
+      <div id="formStep4" class="form-step" style="display:none;">
+        <div class="countdown-container">
+          <div class="eyebrow" style="color:var(--gold-champagne);" data-en="Application Received" data-he="הבקשה התקבלה">Application Received</div>
+          <h3 style="color:white; margin-bottom:8px;" data-en="Your Administrative Waiting Period" data-he="תקופת ההמתנה המנהלית שלך">Your Administrative Waiting Period</h3>
+          <div class="countdown-ring-wrapper">
+            <svg class="countdown-ring-svg" viewBox="0 0 200 200">
+              <defs><linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F7E7B4"/><stop offset="50%" style="stop-color:#D4AF37"/><stop offset="100%" style="stop-color:#B89550"/></linearGradient></defs>
+              <circle class="countdown-ring-bg" cx="100" cy="100" r="90" fill="none" stroke-width="8"/>
+              <circle class="countdown-ring-progress" id="countdownRing" cx="100" cy="100" r="90" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="565.48" stroke-dashoffset="0"/>
+            </svg>
+            <div class="countdown-display"><div class="countdown-time" id="countdownTime">02:00</div><div class="countdown-label" data-en="Review Period" data-he="תקופת סקירה">Review Period</div></div>
+          </div>
+          <div class="countdown-complete" id="countdownComplete"><i class="fas fa-check-circle"></i><h3 data-en="REVIEW PERIOD COMPLETED" data-he="תקופת הסקירה הסתיימה">REVIEW PERIOD COMPLETED</h3><p data-en="Your dashboard is now accessible." data-he="לוח הבקרה שלך נגיש כעת.">Your dashboard is now accessible.</p></div>
+          <button class="btn btn-gold btn-lg" id="dashboardBtn" style="display:none;" onclick="navigate('dashboard')" data-en="Open My Dashboard" data-he="פתח את לוח הבקרה שלי">Open My Dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 6: DASHBOARD -->
+  <div id="page-dashboard" class="page">
+    <div class="panel dark-panel" style="text-align:center; padding:40px;">
+      <div class="eyebrow" style="color:var(--gold-champagne);" data-en="Recognition Dashboard" data-he="לוח הוקרה">Recognition Dashboard</div>
+      <h2 style="color:white;" data-en="Your Application <span class='gold-text'>Dashboard</span>" data-he="לוח הבקרה של <span class='gold-text'>הבקשה</span>">Your Application <span class="gold-text">Dashboard</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-info"><h4 data-en="Application Progress" data-he="התקדמות בקשה">Application Progress</h4><div class="stat-value">75%</div></div></div>
+      <div class="stat-card"><div class="stat-icon"><i class="fas fa-file-alt"></i></div><div class="stat-info"><h4 data-en="Documents Received" data-he="מסמכים שהתקבלו">Documents Received</h4><div class="stat-value">3/4</div></div></div>
+      <div class="stat-card"><div class="stat-icon"><i class="fas fa-calendar-day"></i></div><div class="stat-info"><h4 data-en="Days Since Submission" data-he="ימים מאז ההגשה">Days Since Submission</h4><div class="stat-value" id="statDays">—</div></div></div>
+      <div class="stat-card"><div class="stat-icon"><i class="fas fa-hashtag"></i></div><div class="stat-info"><h4 data-en="Application Reference" data-he="מספר ייחוס">Application Reference</h4><div class="stat-value" id="statRef" style="font-size:1rem;">—</div></div></div>
+    </div>
+    <div class="panel">
+      <h3 data-en="Seven-Stage Progress Tracker" data-he="מעקב התקדמות שבעת השלבים">Seven-Stage Progress Tracker</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="1. Initial Representative Enquiry" data-he="1. פנייה ראשונית של נציג">1. Initial Representative Enquiry</h4><p data-en="Status: Complete" data-he="סטטוס: הושלם">Status: Complete</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="2. Eligibility & Identity Review" data-he="2. סקירת זכאות וזהות">2. Eligibility & Identity Review</h4><p data-en="Status: Complete" data-he="סטטוס: הושלם">Status: Complete</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot done"></div><div class="timeline-card done"><h4 data-en="3. Documentation Assessment" data-he="3. הערכת מסמכים">3. Documentation Assessment</h4><p data-en="Status: Complete" data-he="סטטוס: הושלם">Status: Complete</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot current"></div><div class="timeline-card current"><h4 data-en="4. Administrative Verification" data-he="4. אימות מנהלי">4. Administrative Verification</h4><p data-en="Status: Under Verification" data-he="סטטוס: באימות">Status: Under Verification</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="5. Recognition Review" data-he="5. סקירת הוקרה">5. Recognition Review</h4><p data-en="Status: Pending" data-he="סטטוס: ממתין">Status: Pending</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="6. Delivery Planning" data-he="6. תכנון משלוח">6. Delivery Planning</h4><p data-en="Status: Pending" data-he="סטטוס: ממתין">Status: Pending</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><h4 data-en="7. Ongoing Wellness & Follow-up" data-he="7. רווחה שוטפת ומעקב">7. Ongoing Wellness & Follow-up</h4><p data-en="Status: Pending" data-he="סטטוס: ממתין">Status: Pending</p></div></div>
+      </div>
+    </div>
+    <div class="panel dark-panel" style="text-align:center;">
+      <h3 style="color:var(--gold-bright);" data-en="PROCEED TO DELIVERY ADDRESS" data-he="המשך לכתובת המשלוח">PROCEED TO DELIVERY ADDRESS</h3>
+      <p style="color:#ccc; margin-bottom:20px;" data-en="Submit your delivery information for the proposed recognition package." data-he="שלח את פרטי המשלוח שלך עבור חבילת ההוקרה המוצעת.">Submit your delivery information for the proposed recognition package.</p>
+      <button class="btn btn-gold btn-lg" onclick="navigate('delivery')" data-en="ADD DELIVERY ADDRESS" data-he="הוסף כתובת למשלוח">ADD DELIVERY ADDRESS</button>
+    </div>
+  </div>
+
+  <!-- PAGE 7: DELIVERY -->
+  <div id="page-delivery" class="page">
+    <div class="panel dark-panel" style="text-align:center; padding:40px;">
+      <div class="eyebrow" style="color:var(--gold-champagne);" data-en="Shipment Authorization Center" data-he="מרכז הרשאת משלוח">Shipment Authorization Center</div>
+      <h2 style="color:white;" data-en="DELIVERY & <span class='gold-text'>SHIPMENT CENTER</span>" data-he="מרכז <span class='gold-text'>משלוחים והובלה</span>">DELIVERY & <span class="gold-text">SHIPMENT CENTER</span></h2>
+    </div>
+    <div class="panel">
+      <h3 data-en="Section A — Recognition Package Manifest" data-he="סעיף א' — מניפסט חבילת הוקרה">Section A — Recognition Package Manifest</h3>
+      <table class="manifest-table">
+        <thead><tr><th data-en="#" data-he="#">#</th><th data-en="Item" data-he="פריט">Item</th><th data-en="Description" data-he="תיאור">Description</th><th data-en="Qty" data-he="כמות">Qty</th><th data-en="Status" data-he="סטטוס">Status</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td data-en="Tesla Vehicle" data-he="רכב טסלה">Tesla Vehicle</td><td data-en="Vehicle for accessible mobility" data-he="רכב לניידות נגישה">Vehicle for accessible mobility</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>2</td><td data-en="$120,000 Financial Award" data-he="פרס כספי $120,000">$120,000 Financial Award</td><td data-en="Financial recognition benefit" data-he="הטבת הכרה כספית">Financial recognition benefit</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>3</td><td>iPhone</td><td data-en="Communication device" data-he="מכשיר תקשורת">Communication device</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>4</td><td data-en="Television" data-he="טלוויזיה">Television</td><td data-en="Entertainment display" data-he="מסך בידור">Entertainment display</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>5</td><td data-en="Refrigerator" data-he="מקרר">Refrigerator</td><td data-en="Household appliance" data-he="מכשיר חשמלי ביתי">Household appliance</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>6</td><td data-en="Gold Military Medal" data-he="מדליית זהב צבאית">Gold Military Medal</td><td data-en="Commemorative medal" data-he="מדליה מזכרת">Commemorative medal</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>7</td><td data-en="Certificate of Honour" data-he="תעודת כבוד">Certificate of Honour</td><td data-en="Framed certificate" data-he="תעודה ממוסגרת">Framed certificate</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>8</td><td data-en="Recovery Support" data-he="תמיכה בהחלמה">Recovery Support</td><td data-en="Recovery materials" data-he="חומרי החלמה">Recovery materials</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>9</td><td data-en="Home Furnishings" data-he="ריהוט ביתי">Home Furnishings</td><td data-en="Furniture essentials" data-he="חיוני ריהוט">Furniture essentials</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+          <tr><td>10</td><td data-en="Wellness Materials" data-he="חומרי רווחה">Wellness Materials</td><td data-en="Long-term resources" data-he="משאבים ארוכי טווח">Long-term resources</td><td>1</td><td><span class="status-pill"><i class="far fa-clock"></i> <span data-en="Proposed" data-he="מוצע">Proposed</span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="deliveryFormPanel">
+      <h3 data-en="Section B — Recipient Delivery Information" data-he="סעיף ב' — פרטי משלוח לנמען">Section B — Recipient Delivery Information</h3>
+      <div class="form-grid-2">
+        <div class="form-group full"><label class="form-label" data-en="Recipient's Full Name <span class='req'>*</span>" data-he="שם מלא של הנמען <span class='req'>*</span>">Recipient's Full Name <span class="req">*</span></label><input type="text" class="form-input" id="delName" data-en-ph="Recipient's full name" data-he-ph="שם מלא של הנמען"></div>
+        <div class="form-group"><label class="form-label" data-en="Telephone Number <span class='req'>*</span>" data-he="מספר טלפון <span class='req'>*</span>">Telephone Number <span class="req">*</span></label><input type="tel" class="form-input" id="delPhone" data-en-ph="+1 (555) 000-0000" data-he-ph="+972 50 000 0000"></div>
+        <div class="form-group"><label class="form-label" data-en="Email Address" data-he="כתובת דוא״ל">Email Address</label><input type="email" class="form-input" id="delEmail" data-en-ph="email@example.com" data-he-ph="דוא״ל@דוגמה.קום"></div>
+        <div class="form-group"><label class="form-label" data-en="Country <span class='req'>*</span>" data-he="מדינה <span class='req'>*</span>">Country <span class="req">*</span></label><select class="form-select" id="delCountry"><option data-en="Select..." data-he="בחר...">Select...</option><option data-en="United States" data-he="ארצות הברית">United States</option><option data-en="United Kingdom" data-he="הממלכה המאוחדת">United Kingdom</option><option data-en="Canada" data-he="קנדה">Canada</option><option data-en="Australia" data-he="אוסטרליה">Australia</option><option data-en="Israel" data-he="ישראל">Israel</option></select></div>
+        <div class="form-group"><label class="form-label" data-en="State or Region" data-he="מדינה או אזור">State or Region</label><input type="text" class="form-input" id="delState"></div>
+        <div class="form-group"><label class="form-label" data-en="City <span class='req'>*</span>" data-he="עיר <span class='req'>*</span>">City <span class="req">*</span></label><input type="text" class="form-input" id="delCity" data-en-ph="City" data-he-ph="עיר"></div>
+        <div class="form-group"><label class="form-label" data-en="Street Address <span class='req'>*</span>" data-he="כתובת רחוב <span class='req'>*</span>">Street Address <span class="req">*</span></label><input type="text" class="form-input" id="delStreet" data-en-ph="123 Main Street" data-he-ph="רחוב ראשי 123"></div>
+        <div class="form-group"><label class="form-label" data-en="Postal Code" data-he="מיקוד">Postal Code</label><input type="text" class="form-input" id="delPostal"></div>
+        <div class="form-group full"><label class="form-label" data-en="Additional Delivery Instructions" data-he="הוראות משלוח נוספות">Additional Delivery Instructions</label><textarea class="form-textarea" id="delInstructions" data-en-ph="Any special delivery instructions..." data-he-ph="הוראות משלוח מיוחדות..."></textarea></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3 data-en="Section C — Delivery Authorization" data-he="סעיף ג' — הרשאת משלוח">Section C — Delivery Authorization</h3>
+      <div class="form-checkbox"><input type="checkbox" id="auth1" class="auth-check"><label for="auth1" data-en="I confirm that I am authorized to provide this delivery information." data-he="אני מאשר/ת שאני מורשה לספק מידע משלוח זה.">I confirm that I am authorized to provide this delivery information.</label></div>
+      <div class="form-checkbox"><input type="checkbox" id="auth2" class="auth-check"><label for="auth2" data-en="I understand that the proposed recognition items remain subject to confirmation." data-he="אני מבין/ה כי פריטי ההוקרה המוצעים נשארים כפופים לאישור.">I understand that the proposed recognition items remain subject to confirmation.</label></div>
+      <div class="form-checkbox"><input type="checkbox" id="auth3" class="auth-check"><label for="auth3" data-en="I understand that providing an address does not guarantee shipment." data-he="אני מבין/ה כי מתן כתובת אינו מבטיח משלוח.">I understand that providing an address does not guarantee shipment.</label></div>
+      <div class="form-checkbox"><input type="checkbox" id="auth4" class="auth-check"><label for="auth4" data-en="I acknowledge the portal's privacy and information-handling terms." data-he="אני מכיר/ה בתנאי הפרטיות וטיפול במידע של הפורטל.">I acknowledge the portal's privacy and information-handling terms.</label></div>
+      <div class="text-center" style="margin-top:24px;"><button class="btn btn-gold btn-lg" onclick="submitDelivery()" data-en="SUBMIT DELIVERY REQUEST" data-he="שלח בקשת משלוח">SUBMIT DELIVERY REQUEST</button></div>
+    </div>
+
+    <div id="deliveryConfirmation" style="display:none;">
+      <div class="panel" style="border:2px solid var(--green);">
+        <div style="text-align:center;"><i class="fas fa-check-circle" style="font-size:3rem; color:var(--green); margin-bottom:16px;"></i><h3 data-en="DELIVERY INFORMATION RECEIVED" data-he="פרטי המשלוח התקבלו">DELIVERY INFORMATION RECEIVED</h3></div>
+        <div style="text-align:center; margin-top:24px;">
+          <button class="btn btn-gold btn-lg" onclick="sendDeliveryEmail()" data-en="SEND DELIVERY DETAILS BY EMAIL" data-he="שלח פרטי משלוח בדוא״ל">SEND DELIVERY DETAILS BY EMAIL</button>
+          <p class="muted" style="margin-top:16px;" data-en="Your email application has opened with your delivery information prepared. Please review the message and press Send to complete the email." data-he="אפליקציית הדוא״ל שלך נפתחה עם פרטי המשלוח שלך מוכנים. נא לסקור את ההודעה וללחוץ שלח כדי להשלים את הדוא״ל.">Your email application has opened with your delivery information prepared. Please review the message and press Send to complete the email.</p>
+        </div>
+      </div>
+      <div class="email-section">
+        <div class="email-halo"></div>
+        <div class="email-content">
+          <h3 class="email-heading" data-en="★ DIRECT EMAIL SUPPORT ★" data-he="★ תמיכת דוא״ל ישירה ★">★ DIRECT EMAIL SUPPORT ★</h3>
+          <p class="email-subtitle" data-en="For assistance with your delivery request, contact the support team below." data-he="לסיוע בבקשת המשלוח שלך, צור קשר עם צוות התמיכה למטה.">For assistance with your delivery request, contact the support team below.</p>
+          <a href="mailto:humanitarianaidservicesaccess@gmail.com" class="email-link"><i class="fas fa-envelope"></i> humanitarianaidservicesaccess@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 8: VERIFICATION -->
+  <div id="page-verification" class="page">
+    <div class="panel">
+      <div class="eyebrow" data-en="Independent Verification Portal" data-he="פורטל אימות עצמאי">Independent Verification Portal</div>
+      <h2 data-en="Application <span class='gold-text'>Verification</span>" data-he="אימות <span class='gold-text'>בקשה</span>">Application <span class="gold-text">Verification</span></h2>
+      <p data-en="Enter an application reference number below to check the current recorded status." data-he="הזן מספר ייחוס בקשה למטה כדי לבדוק את הסטטוס המתועד הנוכחי.">Enter an application reference number below to check the current recorded status.</p>
+      <div class="form-group full" style="margin-top:20px;"><label class="form-label" data-en="Enter Application Reference Number" data-he="הזן מספר ייחוס בקשה">Enter Application Reference Number</label><input type="text" class="form-input" id="verifyInput" style="text-align:center; font-family:'Cinzel',serif; letter-spacing:2px;" data-en-ph="WH-2026-XXXX" data-he-ph="WH-2026-XXXX" placeholder="WH-2026-XXXX"></div>
+      <div class="text-center"><button class="btn btn-gold" onclick="verifyApplication()" data-en="VERIFY APPLICATION" data-he="אמת בקשה">VERIFY APPLICATION</button></div>
+      <div class="verify-result" id="verifyResult"><i id="verifyIcon"></i><h3 id="verifyTitle"></h3><p id="verifyMessage"></p></div>
+    </div>
+  </div>
+
+  <!-- PAGE 9: RESOURCES -->
+  <div id="page-resources" class="page">
+    <div class="panel">
+      <div class="eyebrow" data-en="Resources & Support" data-he="משאבים ותמיכה">Resources & Support</div>
+      <h2 data-en="Frequently Asked <span class='gold-text'>Questions</span>" data-he="שאלות <span class='gold-text'>נפוצות</span>">Frequently Asked <span class="gold-text">Questions</span></h2>
+      <div id="faqContainer">
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="What is the programme?" data-he="מהי התכנית?">What is the programme?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="A structured administrative portal for proposed recognition opportunities for wounded military personnel." data-he="פורטל מנהלי מובנה להזדמנויות הוקרה מוצעות עבור חיילים פצועים.">A structured administrative portal for proposed recognition opportunities for wounded military personnel.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="Is the $120,000 financial recognition confirmed?" data-he="האם ההכרה הכספית של $120,000 מאושרת?">Is the $120,000 financial recognition confirmed?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="No. It is a proposed benefit subject to eligibility, approval, and formal confirmation." data-he="לא. זוהי הטבה מוצעת הכפופה לזכאות, אישור ואישור רשמי.">No. It is a proposed benefit subject to eligibility, approval, and formal confirmation.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="Is the Tesla vehicle guaranteed?" data-he="האם רכב הטסלה מובטח?">Is the Tesla vehicle guaranteed?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="No. The Tesla is a proposed recognition item until independently confirmed." data-he="לא. הטסלה היא פריט הוקרה מוצע עד לאישור עצמאי.">No. The Tesla is a proposed recognition item until independently confirmed.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="Why is there a two-minute countdown?" data-he="מדוע יש ספירה לאחור של שתי דקות?">Why is there a two-minute countdown?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="The two-minute countdown is an administrative waiting period separating application submission from dashboard access." data-he="הספירה לאחור של שתי דקות היא תקופת המתנה מנהלית המפרידה בין הגשת הבקשה לגישה ללוח הבקרה.">The two-minute countdown is an administrative waiting period separating application submission from dashboard access.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="How do I enter my delivery address?" data-he="כיצד אזין את כתובת המשלוח שלי?">How do I enter my delivery address?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="After the dashboard unlocks, proceed to the Delivery Center to submit your information." data-he="לאחר שלוח הבקרה נפתח, המשך למרכז המשלוחים כדי להזין את פרטיך.">After the dashboard unlocks, proceed to the Delivery Center to submit your information.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-en="How is personal information protected?" data-he="כיצד מידע אישי מוגן?">How is personal information protected?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer" data-en="Personal information is collected only for clearly explained and legitimate purposes. It is protected through secure authentication, encrypted storage, and strict access controls." data-he="מידע אישי נאסף רק למטרות מוסברות ולגיטימיות בבירור. הוא מוגן באמצעות אימות מאובטח, אחסון מוצפן ובקרות גישה קפדניות.">Personal information is collected only for clearly explained and legitimate purposes. It is protected through secure authentication, encrypted storage, and strict access controls.</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-crest" data-en="★ HONOUR · COURAGE · RECOVERY ★" data-he="★ כבוד · אומץ · החלמה ★">★ HONOUR · COURAGE · RECOVERY ★</div>
+    <p style="color:var(--gold-champagne); margin-bottom:8px;" data-en="Wounded Military Heroes Portal" data-he="פורטל גיבורים צבאים פצועים">Wounded Military Heroes Portal</p>
+    <div class="footer-nav">
+      <a onclick="navigate('home')" data-en="Home" data-he="דף הבית">Home</a>
+      <a onclick="navigate('about')" data-en="About" data-he="אודות">About</a>
+      <a onclick="navigate('recognition')" data-en="Recognition" data-he="הוקרה">Recognition</a>
+      <a onclick="navigate('application')" data-en="Apply" data-he="הגשת בקשה">Apply</a>
+      <a onclick="navigate('verification')" data-en="Verification" data-he="אימות">Verification</a>
+      <a onclick="navigate('resources')" data-en="Resources" data-he="משאבים">Resources</a>
+    </div>
+    <p class="footer-bottom">© 2026 Wounded Military Heroes Portal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function navigate(pageId) {
+  // Block dashboard access if countdown hasn't finished
+  if (pageId === 'dashboard') {
+    const expiry = parseInt(localStorage.getItem('wmh_countdown_expiry'));
+    if (expiry && Date.now() < expiry) {
+      alert(getLang() === 'he' ? 'לוח הבקרה נעול עד לסיום הספירה לאחור.' : 'Dashboard is locked until the countdown completes.');
+      navigate('application');
+      goToStep(4);
+      return;
+    }
+    loadDashboardData();
+  }
+
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const targetPage = document.getElementById('page-' + pageId);
+  if (targetPage) targetPage.classList.add('active');
+  
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const activeLink = Array.from(document.querySelectorAll('.nav-link')).find(l => l.getAttribute('onclick') && l.getAttribute('onclick').includes(pageId));
+  if (activeLink) activeLink.classList.add('active');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('navLinks').classList.remove('show');
+}
+
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('show'); }
+
+function setLanguage(lang) {
+  const html = document.documentElement;
+  const body = document.body;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text !== null) { if (el.tagName === 'OPTION') el.textContent = text; else el.innerHTML = text; }
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(el => {
+    const ph = el.getAttribute('data-' + lang + '-ph');
+    if (ph !== null) el.placeholder = ph;
+  });
+  if (lang === 'he') {
+    html.setAttribute('dir', 'rtl'); html.setAttribute('lang', 'he');
+    body.classList.add('rtl'); body.classList.remove('ltr');
+  } else {
+    html.setAttribute('dir', 'ltr'); html.setAttribute('lang', 'en');
+    body.classList.add('ltr'); body.classList.remove('rtl');
+  }
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+  localStorage.setItem('wmh_lang', lang);
+}
+
+let currentSlide = 0;
+const totalSlides = 3;
+function changeSlide(direction) { currentSlide = (currentSlide + direction + totalSlides) % totalSlides; setSlide(currentSlide); }
+function setSlide(index) {
+  currentSlide = index;
+  document.querySelectorAll('.gallery-slide').forEach((s, i) => s.classList.toggle('active', i === index));
+  document.querySelectorAll('.gallery-thumb').forEach((t, i) => t.classList.toggle('active', i === index));
+  const activeSlide = document.querySelectorAll('.gallery-slide')[index];
+  if (activeSlide) {
+    const caption = activeSlide.getAttribute('data-caption');
+    const captionEl = document.getElementById('galleryCaption');
+    if (captionEl && caption) captionEl.textContent = caption;
+  }
+}
+
+function goToStep(step) {
+  if (step === 2 || step === 3) {
+    const repName = document.getElementById('repName').value;
+    const repEmail = document.getElementById('repEmail').value;
+    const repPhone = document.getElementById('repPhone').value;
+    const repRelationship = document.getElementById('repRelationship').value;
+    const repCountry = document.getElementById('repCountry').value;
+    if (!repName || !repEmail || !repPhone || repRelationship === 'Select...' || repCountry === 'Select...') {
+      alert(getLang() === 'he' ? 'נא למלא את כל השדות הנדרשים בשלב 1' : 'Please fill in all required fields in Step 1');
+      goToStep(1); return;
+    }
+  }
+  if (step === 3) {
+    const soldierName = document.getElementById('soldierName').value;
+    const soldierService = document.getElementById('soldierService').value;
+    const soldierBranch = document.getElementById('soldierBranch').value;
+    const soldierCountry = document.getElementById('soldierCountry').value;
+    if (!soldierName || !soldierService || soldierBranch === 'Select...' || soldierCountry === 'Select...') {
+      alert(getLang() === 'he' ? 'נא למלא את כל השדות הנדרשים בשלב 2' : 'Please fill in all required fields in Step 2');
+      goToStep(2); return;
+    }
+    populateReview();
+  }
+  document.querySelectorAll('.form-step').forEach(s => s.style.display = 'none');
+  const targetStep = document.getElementById('formStep' + step);
+  if (targetStep) targetStep.style.display = 'block';
+  document.querySelectorAll('.step-node').forEach((n, i) => {
+    n.classList.remove('active', 'done');
+    if (i + 1 < step) n.classList.add('done');
+    else if (i + 1 === step) n.classList.add('active');
+  });
+  document.querySelectorAll('.step-line').forEach((l, i) => l.classList.toggle('done', i + 1 < step));
+}
+
+function populateReview() {
+  const reviewPanel = document.getElementById('reviewPanel');
+  const data = {
+    'Representative Name': document.getElementById('repName').value,
+    'Relationship': document.getElementById('repRelationship').value,
+    'Email': document.getElementById('repEmail').value,
+    'Telephone': document.getElementById('repPhone').value,
+    'Country': document.getElementById('repCountry').value,
+    'Soldier Name': document.getElementById('soldierName').value,
+    'Service Number': document.getElementById('soldierService').value,
+    'Branch': document.getElementById('soldierBranch').value,
+    'Country of Service': document.getElementById('soldierCountry').value
+  };
+  let html = '<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">';
+  for (const [key, value] of Object.entries(data)) {
+    html += `<div style="padding:12px; background:white; border-radius:6px; border-left:3px solid var(--gold);"><strong style="color:var(--grey); font-size:0.8rem; text-transform:uppercase;">${key}:</strong><br><span style="color:var(--navy); font-weight:600;">${value || '—'}</span></div>`;
+  }
+  html += '</div>';
+  reviewPanel.innerHTML = html;
+  const lang = localStorage.getItem('wmh_lang') || 'en';
+  setLanguage(lang);
+}
+
+function submitApplication() {
+  if (!document.getElementById('privacyAck').checked) {
+    alert(getLang() === 'he' ? 'נא לאשר את מדיניות הפרטיות' : 'Please acknowledge the privacy policy'); return;
+  }
+  if (localStorage.getItem('wmh_app_submitted') === 'true') {
+    goToStep(4); resumeCountdown(); return;
+  }
+  // Simulate Database Save
+  const refNum = 'WH-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const timestamp = Date.now();
+  const expiry = timestamp + (2 * 60 * 1000); // 2 minutes
+  
+  localStorage.setItem('wmh_app_ref', refNum);
+  localStorage.setItem('wmh_app_submitted', 'true');
+  localStorage.setItem('wmh_countdown_start', timestamp.toString());
+  localStorage.setItem('wmh_countdown_expiry', expiry.toString());
+  
+  goToStep(4);
+  startCountdown();
+}
+
+let countdownInterval;
+function startCountdown() {
+  const expiry = parseInt(localStorage.getItem('wmh_countdown_expiry'));
+  if (!expiry) return;
+  const ring = document.getElementById('countdownRing');
+  const timeDisplay = document.getElementById('countdownTime');
+  const completeBox = document.getElementById('countdownComplete');
+  const dashboardBtn = document.getElementById('dashboardBtn');
+  const ringCircumference = 565.48;
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    const now = Date.now();
+    const remaining = Math.max(0, expiry - now);
+    const remainingSec = Math.ceil(remaining / 1000);
+    if (remaining <= 0) {
+      clearInterval(countdownInterval);
+      timeDisplay.textContent = '00:00';
+      ring.style.strokeDashoffset = ringCircumference;
+      completeBox.classList.add('show');
+      dashboardBtn.style.display = 'inline-flex';
+      return;
+    }
+    const mins = Math.floor(remainingSec / 60);
+    const secs = remainingSec % 60;
+    timeDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    const progress = remaining / (2 * 60 * 1000);
+    ring.style.strokeDashoffset = ringCircumference * (1 - progress);
+  }, 1000);
+}
+
+function resumeCountdown() {
+  const expiry = parseInt(localStorage.getItem('wmh_countdown_expiry'));
+  if (!expiry) return;
+  const now = Date.now();
+  if (now >= expiry) {
+    document.getElementById('countdownTime').textContent = '00:00';
+    document.getElementById('countdownRing').style.strokeDashoffset = 565.48;
+    document.getElementById('countdownComplete').classList.add('show');
+    document.getElementById('dashboardBtn').style.display = 'inline-flex';
+  } else {
+    startCountdown();
+  }
+}
+
+function getLang() { return localStorage.getItem('wmh_lang') || 'en'; }
+
+function loadDashboardData() {
+  const ref = localStorage.getItem('wmh_app_ref') || 'WH-2026-XXXX';
+  const submitted = localStorage.getItem('wmh_app_submitted') === 'true';
+  document.getElementById('statRef').textContent = ref;
+  if (submitted) {
+    const start = parseInt(localStorage.getItem('wmh_countdown_start'));
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    document.getElementById('statDays').textContent = days;
+  } else {
+    document.getElementById('statDays').textContent = '—';
+  }
+}
+
+function submitDelivery() {
+  const checks = document.querySelectorAll('.auth-check');
+  let allChecked = true;
+  checks.forEach(c => { if (!c.checked) allChecked = false; });
+  if (!allChecked) {
+    alert(getLang() === 'he' ? 'נא לסמן את כל ארבע תיבות ההרשאה' : 'Please check all four authorization checkboxes'); return;
+  }
+  const name = document.getElementById('delName').value;
+  const phone = document.getElementById('delPhone').value;
+  const city = document.getElementById('delCity').value;
+  const country = document.getElementById('delCountry').value;
+  if (!name || !phone || !city || country === 'Select...') {
+    alert(getLang() === 'he' ? 'נא למלא את כל השדות הנדרשים' : 'Please fill in all required fields'); return;
+  }
+  // Simulate saving to DB
+  document.getElementById('deliveryFormPanel').style.display = 'none';
+  document.getElementById('deliveryConfirmation').style.display = 'block';
+  document.getElementById('deliveryConfirmation').scrollIntoView({ behavior: 'smooth' });
+}
+
+function sendDeliveryEmail() {
+  const appRef = localStorage.getItem('wmh_app_ref') || 'WH-2026-XXXX';
+  const name = document.getElementById('delName').value;
+  const street = document.getElementById('delStreet').value;
+  const city = document.getElementById('delCity').value;
+  const state = document.getElementById('delState').value;
+  const postal = document.getElementById('delPostal').value;
+  const country = document.getElementById('delCountry').value;
+  const phone = document.getElementById('delPhone').value;
+  const instructions = document.getElementById('delInstructions').value;
+
+  const subject = `Delivery Information — Application Reference ${appRef}`;
+  const body = `Hello Support Team,\n\nI have submitted my delivery information.\n\nApplication Reference: ${appRef}\nRecipient Name: ${name}\nDelivery Address: ${street}, ${city}, ${state} ${postal}, ${country}\nTelephone: ${phone}\nDelivery Instructions: ${instructions}\n\nPlease confirm receipt.\n\nThank you.`;
+  
+  window.location.href = `mailto:humanitarianaidservicesaccess@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function verifyApplication() {
+  const input = document.getElementById('verifyInput').value.trim();
+  const resultBox = document.getElementById('verifyResult');
+  const icon = document.getElementById('verifyIcon');
+  const title = document.getElementById('verifyTitle');
+  const message = document.getElementById('verifyMessage');
+  const lang = getLang();
+  resultBox.className = 'verify-result';
+  if (!input) {
+    resultBox.classList.add('show', 'error');
+    icon.className = 'fas fa-times-circle';
+    title.textContent = lang === 'he' ? 'שגיאה' : 'Error';
+    message.textContent = lang === 'he' ? 'נא להזין מספר ייחוס.' : 'Please enter a reference.';
+    return;
+  }
+  // Simulate DB Query
+  const savedRef = localStorage.getItem('wmh_app_ref');
+  const submitted = localStorage.getItem('wmh_app_submitted') === 'true';
+  
+  if (submitted && input === savedRef) {
+    resultBox.classList.add('show', 'pending');
+    icon.className = 'fas fa-clock';
+    title.textContent = lang === 'he' ? 'סטטוס: באימות' : 'Status: UNDER VERIFICATION';
+    message.textContent = lang === 'he' ? 'בקשה זו נמצאת כעת באימות.' : 'This application is currently under verification.';
+  } else if (input.startsWith('WH-2026')) {
+    resultBox.classList.add('show', 'success');
+    icon.className = 'fas fa-inbox';
+    title.textContent = lang === 'he' ? 'סטטוס: הבקשה התקבלה' : 'Status: APPLICATION RECEIVED';
+    message.textContent = lang === 'he' ? 'הבקשה התקבלה וממתינה לסקירה.' : 'The application has been received and is awaiting review.';
+  } else {
+    resultBox.classList.add('show', 'error');
+    icon.className = 'fas fa-times-circle';
+    title.textContent = lang === 'he' ? 'לא נמצאה בקשה' : 'No Matching Application Found';
+    message.textContent = lang === 'he' ? 'מספר הייחוס אינו תואם.' : 'The reference does not match any recorded application.';
+  }
+}
+
+function toggleFaq(element) {
+  const item = element.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('wmh_lang') || 'en';
+  setLanguage(savedLang);
+  
+  // Resume countdown if user was in the middle of it
+  if (localStorage.getItem('wmh_app_submitted') === 'true') {
+    const expiry = parseInt(localStorage.getItem('wmh_countdown_expiry'));
+    if (expiry && Date.now() < expiry) {
+      const appPage = document.getElementById('page-application');
+      if (appPage && appPage.classList.contains('active')) {
+        goToStep(4); resumeCountdown();
+      }
+    }
+  }
+  
+  // Auto-advance Tesla gallery
+  setInterval(() => {
+    if (document.getElementById('page-recognition').classList.contains('active')) {
+      changeSlide(1);
+    }
+  }, 6000);
+});
+</script>
+</body>
+</html>
